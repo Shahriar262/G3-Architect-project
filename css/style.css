@@ -161,6 +161,28 @@ main,section{
     
     
 }
+
+#experience-badge{
+    padding: 45px 42px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: -130px;
+    margin-left: -74px;
+}
+#experience-year{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.btn-primary-2{
+     background-color: #FF900E;
+    padding: 8px;
+    color: #FFFFFF;
+    width: 342px;
+    height: 200px;
+    border-radius: 8px;
+    border-style: none;
+}
 /* some facts related styles */
 .fact-container{
     display: grid;
@@ -205,17 +227,35 @@ main,section{
 .sponsor-companies img{
     filter: grayscale(100%);
 }
+/* footer styles */
+.footer{
+    background-color: #FFF4E7;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 1.25rem;
+    border-radius: 8px;
+    width: 1470px;
+    margin-top: 100px;
+}
 
 /* responsive media query */
 @media screen and (max-width:576px) {
-    .navbar, .nav-links, .teams{
+    .navbar,
+     .nav-links,
+     .features,
+      .teams{
         flex-direction: column;
     }
-    .team-img-container, .fact-container, .sponsor-companies{
+    .team-img-container, .sponsor-companies{
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;
         gap: 24px;
         
+    }
+    .fact-container{
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        gap: 21px;
     }
     
     .our-features{
@@ -223,10 +263,22 @@ main,section{
         margin-top: 5px;
         
     }
+
+    .feature-architect img{
+        width: 100%;
+    }
+    #experience-badge{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .footer{
+        width: 96%;
+        margin-bottom: 30px;
+    }
 }
 
 @media screen and (min-width:576px) and (max-width:992px) {
-    .teams{
+    .teams, .features{
         flex-direction: column;
     }
     .our-features{
@@ -236,5 +288,13 @@ main,section{
     .fact-container, .sponsor-companies{
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
+    }
+     #experience-badge{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+     .footer{
+        width: 98%;
+        margin-bottom: 30px;
     }
 }
